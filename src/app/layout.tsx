@@ -76,11 +76,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.className=t;}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.className=t;else document.documentElement.className='light';}catch(e){}})();`,
           }}
         />
         <script

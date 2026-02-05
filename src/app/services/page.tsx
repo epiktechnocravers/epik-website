@@ -3,6 +3,7 @@ import Link from "next/link";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceIcon from "@/components/ServiceIcon";
+import ServiceIllustration from "@/components/ServiceIllustration";
 import { SERVICES } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -72,20 +73,10 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  {/* Visual placeholder */}
+                  {/* Illustration */}
                   <div className="flex-1 w-full">
-                    <div className="aspect-video rounded-xl bg-surface border border-border flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-accent/30 mb-2">
-                          <ServiceIcon
-                            icon={service.icon}
-                            className="w-16 h-16 mx-auto"
-                          />
-                        </div>
-                        <p className="text-sm text-text-muted">
-                          {service.title}
-                        </p>
-                      </div>
+                    <div className="aspect-video rounded-xl bg-surface border border-border flex items-center justify-center p-4">
+                      <ServiceIllustration icon={service.icon} className="w-full h-full" />
                     </div>
                   </div>
                 </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceIcon from "@/components/ServiceIcon";
+import ServiceIllustration from "@/components/ServiceIllustration";
 import HeroCarousel from "@/components/HeroCarousel";
 import { SERVICES } from "@/lib/constants";
 
@@ -97,7 +98,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service, index) => (
               <AnimateOnScroll key={service.title} delay={index * 100}>
-                <div className="group rounded-xl border border-border bg-surface p-6 transition-all hover:border-border-light hover:bg-surface-light">
+                <div className="group rounded-xl border border-border bg-surface overflow-hidden transition-all hover:border-border-light hover:bg-surface-light">
+                  <div className="h-36 bg-accent/3 flex items-center justify-center border-b border-border/50 p-3">
+                    <ServiceIllustration icon={service.icon} className="w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="p-6">
                   <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-accent/10 p-2.5 text-accent">
                     <ServiceIcon icon={service.icon} />
                   </div>
@@ -116,6 +121,7 @@ export default function Home() {
                         {tag}
                       </span>
                     ))}
+                  </div>
                   </div>
                 </div>
               </AnimateOnScroll>

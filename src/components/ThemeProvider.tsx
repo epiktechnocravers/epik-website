@@ -16,15 +16,14 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored) {
-      setTheme(stored);
-      document.documentElement.className = stored;
-    }
+    const initial = stored || "light";
+    setTheme(initial);
+    document.documentElement.className = initial;
     setMounted(true);
   }, []);
 
@@ -37,7 +36,7 @@ export default function ThemeProvider({
 
   // Prevent flash — render children immediately but toggle only works after mount
   return (
-    <ThemeContext.Provider value={{ theme: mounted ? theme : "dark", toggle }}>
+    <ThemeContext.Provider value={{ theme: mounted ? theme : "light", toggle }}>
       {children}
     </ThemeContext.Provider>
   );
