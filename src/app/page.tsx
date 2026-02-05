@@ -116,9 +116,6 @@ export default function Home() {
                     <ServiceIllustration icon={service.icon} className="w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="p-6">
-                  <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-accent/10 p-2.5 text-accent">
-                    <ServiceIcon icon={service.icon} />
-                  </div>
                   <h3 className="text-lg font-semibold mb-2">
                     {service.title}
                   </h3>
