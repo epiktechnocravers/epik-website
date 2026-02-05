@@ -94,6 +94,23 @@ html.light .gradient-text {
   background-size: 64px 64px;
 }
 
+/* Floating animations for hero banner */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-float-medium { animation: float-medium 4s ease-in-out infinite; }
+.animate-float-fast { animation: float-fast 3s ease-in-out infinite; }
+
 /* Glow effect */
 .glow {
   box-shadow: 0 0 60px rgba(99, 102, 241, 0.15);

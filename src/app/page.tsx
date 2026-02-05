@@ -4,6 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ServiceIcon from "@/components/ServiceIcon";
 import ServiceIllustration from "@/components/ServiceIllustration";
 import HeroCarousel from "@/components/HeroCarousel";
+import HeroBanner from "@/components/HeroBanner";
 import { SERVICES } from "@/lib/constants";
 
 export default function Home() {
@@ -11,53 +12,65 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden grid-bg">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-32 sm:py-44">
-          <AnimateOnScroll>
-            <p className="text-sm font-medium text-accent tracking-wider uppercase mb-6">
-              Create · Innovate · Deliver
-            </p>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={100}>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] max-w-4xl">
-              We build systems
-              <br />
-              <span className="gradient-text">that work.</span>
-            </h1>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={200}>
-            <p className="mt-6 text-lg sm:text-xl text-text-secondary max-w-2xl leading-relaxed">
-              Web, mobile, SaaS, AI, and IoT solutions — engineered for scale,
-              built for production. No fluff, just software that delivers.
-            </p>
-          </AnimateOnScroll>
-          <AnimateOnScroll delay={300}>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white transition-all hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/20"
-              >
-                Start a Project
-                <svg
-                  className="ml-2 w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </Link>
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-sm font-medium text-text-secondary transition-all hover:border-border-light hover:text-text-primary"
-              >
-                View Our Work
-              </Link>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24 sm:py-32 lg:py-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Text */}
+            <div>
+              <AnimateOnScroll>
+                <p className="text-sm font-medium text-accent tracking-wider uppercase mb-6">
+                  Create · Innovate · Deliver
+                </p>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={100}>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+                  We build systems
+                  <br />
+                  <span className="gradient-text">that work.</span>
+                </h1>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={200}>
+                <p className="mt-6 text-lg text-text-secondary max-w-lg leading-relaxed">
+                  Web, mobile, SaaS, AI, and IoT solutions — engineered for scale,
+                  built for production. No fluff, just software that delivers.
+                </p>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={300}>
+                <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white transition-all hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/20"
+                  >
+                    Start a Project
+                    <svg
+                      className="ml-2 w-4 h-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </Link>
+                  <Link
+                    href="/case-studies"
+                    className="inline-flex items-center justify-center rounded-lg border border-border px-6 py-3 text-sm font-medium text-text-secondary transition-all hover:border-border-light hover:text-text-primary"
+                  >
+                    View Our Work
+                  </Link>
+                </div>
+              </AnimateOnScroll>
             </div>
-          </AnimateOnScroll>
+
+            {/* Right: Animated Banner */}
+            <AnimateOnScroll delay={400}>
+              <div className="hidden lg:block h-[480px]">
+                <HeroBanner />
+              </div>
+            </AnimateOnScroll>
+          </div>
         </div>
 
         {/* Gradient orb decorations */}
