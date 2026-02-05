@@ -12,7 +12,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden grid-bg">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24 sm:py-32 lg:py-40">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text */}
             <div>
@@ -66,7 +66,7 @@ export default function Home() {
 
             {/* Right: Animated Banner */}
             <AnimateOnScroll delay={400}>
-              <div className="h-[300px] sm:h-[380px] lg:h-[480px]">
+              <div className="h-[220px] sm:h-[300px] lg:h-[440px] -mb-4">
                 <HeroBanner />
               </div>
             </AnimateOnScroll>
@@ -79,10 +79,10 @@ export default function Home() {
       </section>
 
       {/* Hero Banners - Project Showcase */}
-      <section className="border-t border-border py-16 sm:py-20">
+      <section className="border-t border-border py-10 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimateOnScroll>
-            <div className="text-center mb-10">
+            <div className="text-center mb-6">
               <p className="text-sm font-medium text-accent tracking-wider uppercase mb-2">
                 Featured Projects
               </p>
@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="border-t border-border py-24 sm:py-32">
+      <section className="border-t border-border py-14 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimateOnScroll>
             <SectionHeading
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Why Us */}
-      <section className="border-t border-border py-24 sm:py-32 bg-surface">
+      <section className="border-t border-border py-14 sm:py-20 bg-surface">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <AnimateOnScroll>
             <SectionHeading
@@ -195,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-border py-24 sm:py-32">
+      <section className="border-t border-border py-14 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
           <AnimateOnScroll>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">
