@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 const BANNERS = [
   {
@@ -10,6 +11,7 @@ const BANNERS = [
     tags: ["SaaS", "Sports Tech", "Real-time"],
     gradient: "from-green-600 via-emerald-500 to-teal-400",
     icon: "🏆",
+    screenshot: "/screenshots/sportstms.jpg",
   },
   {
     title: "Expedify",
@@ -18,6 +20,7 @@ const BANNERS = [
     tags: ["AI", "CRM", "Automation"],
     gradient: "from-blue-600 via-indigo-500 to-cyan-400",
     icon: "🤖",
+    screenshot: "/screenshots/expedify.jpg",
   },
   {
     title: "BeeFYN",
@@ -26,6 +29,7 @@ const BANNERS = [
     tags: ["HealthTech", "Marketplace", "Logistics"],
     gradient: "from-amber-500 via-orange-500 to-yellow-400",
     icon: "🩺",
+    screenshot: "/screenshots/beefyn.jpg",
   },
   {
     title: "Konnifel",
@@ -34,6 +38,7 @@ const BANNERS = [
     tags: ["EdTech", "Marketplace", "Higher Ed"],
     gradient: "from-violet-600 via-purple-500 to-fuchsia-400",
     icon: "🎓",
+    screenshot: "/screenshots/konnifel.jpg",
   },
   {
     title: "BAF Consultants",
@@ -42,6 +47,25 @@ const BANNERS = [
     tags: ["Corporate", "Consulting", "Brand"],
     gradient: "from-slate-600 via-gray-500 to-zinc-400",
     icon: "🏢",
+    screenshot: "/screenshots/bafconsultants.jpg",
+  },
+  {
+    title: "Bachon Ka Adda",
+    subtitle: "Kids Toy Store",
+    description: "Safe, certified toys with COD, free delivery, and easy returns",
+    tags: ["Shopify", "E-commerce", "D2C"],
+    gradient: "from-pink-500 via-rose-500 to-red-400",
+    icon: "🧸",
+    screenshot: "/screenshots/bachonkaadda.jpg",
+  },
+  {
+    title: "Swatti Kapoor",
+    subtitle: "Designer Fashion Label",
+    description: "Premium Indian fashion — kurtas, dresses, and cultural collections",
+    tags: ["Shopify", "Fashion", "D2C"],
+    gradient: "from-violet-500 via-purple-500 to-fuchsia-400",
+    icon: "👗",
+    screenshot: "/screenshots/swattikapoor.jpg",
   },
 ];
 
@@ -72,62 +96,57 @@ export default function HeroCarousel() {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Banner */}
-      <div
-        className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${banner.gradient} p-8 sm:p-12 transition-all duration-500 min-h-[280px] sm:min-h-[320px] flex flex-col justify-between`}
-      >
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)",
-              backgroundSize: "60px 60px, 80px 80px",
-            }}
-          />
-        </div>
+      <div className="relative overflow-hidden rounded-2xl min-h-[280px] sm:min-h-[340px] flex flex-col justify-end">
+        {/* Screenshot background */}
+        <Image
+          src={banner.screenshot}
+          alt={banner.title}
+          fill
+          className="object-cover object-top transition-all duration-700"
+          sizes="(max-width: 768px) 100vw, 1200px"
+          priority
+        />
 
-        {/* Decorative circles */}
-        <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-2xl" />
-        <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-black/10 rounded-full blur-2xl" />
+        {/* Gradient overlay for text readability */}
+        <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10`} />
 
         {/* Content */}
-        <div className="relative z-10">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl sm:text-4xl">{banner.icon}</span>
+        <div className="relative z-10 p-6 sm:p-8">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-2xl sm:text-3xl">{banner.icon}</span>
             <div>
-              <p className="text-white/70 text-xs sm:text-sm font-medium uppercase tracking-wider">
+              <p className="text-white/60 text-xs sm:text-sm font-medium uppercase tracking-wider">
                 Case Study
               </p>
-              <h3 className="text-white text-2xl sm:text-3xl font-bold">
+              <h3 className="text-white text-xl sm:text-2xl font-bold">
                 {banner.title}
               </h3>
             </div>
           </div>
-          <p className="text-white/90 text-lg sm:text-xl font-medium mb-2">
+          <p className="text-white/80 text-sm sm:text-base font-medium mb-1">
             {banner.subtitle}
           </p>
-          <p className="text-white/70 text-sm sm:text-base max-w-md">
+          <p className="text-white/60 text-xs sm:text-sm max-w-md mb-4">
             {banner.description}
           </p>
-        </div>
 
-        {/* Tags */}
-        <div className="relative z-10 flex flex-wrap gap-2 mt-6">
-          {banner.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs px-3 py-1 rounded-full bg-white/20 text-white backdrop-blur-sm"
-            >
-              {tag}
-            </span>
-          ))}
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2">
+            {banner.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-xs px-3 py-1 rounded-full bg-white/15 text-white/80 backdrop-blur-sm"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Navigation arrows */}
         <button
           onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-colors backdrop-blur-sm"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-colors backdrop-blur-sm z-10"
           aria-label="Previous"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -136,7 +155,7 @@ export default function HeroCarousel() {
         </button>
         <button
           onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-colors backdrop-blur-sm"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-colors backdrop-blur-sm z-10"
           aria-label="Next"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
