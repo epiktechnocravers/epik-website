@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import SectionHeading from "@/components/SectionHeading";
 import { CASE_STUDIES } from "@/lib/constants";
@@ -39,13 +40,15 @@ export default function CaseStudiesPage() {
             {CASE_STUDIES.map((study, index) => (
               <AnimateOnScroll key={study.title} delay={index * 100}>
                 <div className="group rounded-xl border border-border bg-surface overflow-hidden transition-all hover:border-border-light hover:shadow-lg hover:shadow-accent/5">
-                  {/* Gradient thumbnail */}
-                  <div
-                    className={`aspect-video bg-gradient-to-br ${study.gradient} opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center`}
-                  >
-                    <div className="text-white/80 text-center px-6">
-                      <p className="text-lg font-semibold">{study.title}</p>
-                    </div>
+                  {/* Screenshot thumbnail */}
+                  <div className="aspect-video relative overflow-hidden bg-surface">
+                    <Image
+                      src={study.screenshot}
+                      alt={`${study.title} screenshot`}
+                      fill
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                   </div>
 
                   {/* Content */}

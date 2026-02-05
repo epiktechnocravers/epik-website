@@ -90,6 +90,7 @@ export const CASE_STUDIES = [
     gradient: "from-pink-500 to-rose-600",
     url: "https://bachonkaadda.in",
     industry: "E-commerce / Kids & Toys",
+    screenshot: "/screenshots/bachonkaadda.jpg",
   },
   {
     title: "Lahori Zeera",
@@ -99,6 +100,7 @@ export const CASE_STUDIES = [
     gradient: "from-amber-500 to-yellow-600",
     url: "https://lahorizeera.com",
     industry: "FMCG / Beverages",
+    screenshot: "/screenshots/lahorizeera.jpg",
   },
   {
     title: "Swatti Kapoor",
@@ -108,6 +110,7 @@ export const CASE_STUDIES = [
     gradient: "from-violet-500 to-fuchsia-600",
     url: "https://swattikapoor.com",
     industry: "Fashion / Luxury Apparel",
+    screenshot: "/screenshots/swattikapoor.jpg",
   },
   {
     title: "Anjeer",
@@ -117,6 +120,7 @@ export const CASE_STUDIES = [
     gradient: "from-emerald-500 to-teal-600",
     url: "https://anjeer.restaurant",
     industry: "Food & Beverage",
+    screenshot: "/screenshots/anjeer.jpg",
   },
   {
     title: "Sparrow",
@@ -126,6 +130,7 @@ export const CASE_STUDIES = [
     gradient: "from-sky-500 to-blue-600",
     url: "https://thesparrow.in",
     industry: "Art & Design",
+    screenshot: "/screenshots/sparrow.jpg",
   },
   {
     title: "Rainbow Bazaar",
@@ -135,6 +140,7 @@ export const CASE_STUDIES = [
     gradient: "from-red-500 via-yellow-500 to-green-500",
     url: "https://rainbowbazaar.shop",
     industry: "Social Enterprise / Marketplace",
+    screenshot: "/screenshots/rainbowbazaar.jpg",
   },
   {
     title: "Rocketeers",
@@ -144,6 +150,7 @@ export const CASE_STUDIES = [
     gradient: "from-orange-500 to-red-600",
     url: "https://rocketeers.in",
     industry: "Hobby & STEM Education",
+    screenshot: "/screenshots/rocketeers.jpg",
   },
   {
     title: "Augmentum Diagnostics",
@@ -153,6 +160,7 @@ export const CASE_STUDIES = [
     gradient: "from-indigo-500 to-purple-600",
     url: "https://augmentumdiagnostics.com",
     industry: "Healthcare / Diagnostics",
+    screenshot: "/screenshots/augmentum.jpg",
   },
   {
     title: "SportsTMS",
@@ -162,6 +170,7 @@ export const CASE_STUDIES = [
     gradient: "from-green-500 to-emerald-600",
     url: "https://sportstms.in",
     industry: "Sports / Event Management",
+    screenshot: "/screenshots/sportstms.jpg",
   },
   {
     title: "Expedify",
@@ -171,6 +180,7 @@ export const CASE_STUDIES = [
     gradient: "from-cyan-500 to-blue-600",
     url: "https://www.expedify.ai",
     industry: "SaaS / Business Software",
+    screenshot: "/screenshots/expedify.jpg",
   },
   {
     title: "Konnifel",
@@ -180,6 +190,7 @@ export const CASE_STUDIES = [
     gradient: "from-teal-500 to-cyan-600",
     url: "https://konnifel.com",
     industry: "EdTech / Research",
+    screenshot: "/screenshots/konnifel.jpg",
   },
   {
     title: "BeeFYN",
@@ -189,6 +200,7 @@ export const CASE_STUDIES = [
     gradient: "from-yellow-500 to-orange-600",
     url: "https://beefyn.in",
     industry: "HealthTech / Diagnostics",
+    screenshot: "/screenshots/beefyn.jpg",
   },
   {
     title: "BAF Consultants",
@@ -198,5 +210,6 @@ export const CASE_STUDIES = [
     gradient: "from-slate-500 to-zinc-700",
     url: "https://www.bafconsultants.com",
     industry: "Business Consulting",
+    screenshot: "/screenshots/bafconsultants.jpg",
   },
 ] as const;
