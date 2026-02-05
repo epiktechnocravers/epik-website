@@ -66,7 +66,7 @@ export default function Home() {
 
             {/* Right: Animated Banner */}
             <AnimateOnScroll delay={400}>
-              <div className="hidden lg:block h-[480px]">
+              <div className="h-[300px] sm:h-[380px] lg:h-[480px]">
                 <HeroBanner />
               </div>
             </AnimateOnScroll>
