@@ -13,7 +13,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-32 sm:py-44">
           <AnimateOnScroll>
             <p className="text-sm font-medium text-accent tracking-wider uppercase mb-6">
-              Software Engineering Studio
+              Create · Innovate · Deliver
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll delay={100}>

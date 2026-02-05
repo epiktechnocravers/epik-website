@@ -52,9 +52,14 @@ export default function ServicesPage() {
                     <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                       {service.title}
                     </h2>
-                    <p className="text-text-secondary leading-relaxed mb-6">
+                    <p className="text-text-secondary leading-relaxed mb-4">
                       {service.description}
                     </p>
+                    {"detail" in service && (
+                      <p className="text-sm text-text-muted leading-relaxed mb-6">
+                        {service.detail}
+                      </p>
+                    )}
                     <div className="flex flex-wrap gap-2">
                       {service.tags.map((tag) => (
                         <span

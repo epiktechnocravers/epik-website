@@ -19,44 +19,65 @@ export const SERVICES = [
   {
     title: "Web Development",
     description:
-      "Full-stack applications built with React, Next.js, Vue, and Node.js. Fast, accessible, and production-ready.",
+      "Full-stack web applications from prototyping to production. We handle interface design, server programming, business logic, and post-launch support — an end-to-end engineering partner.",
+    detail:
+      "Built with React, Next.js, Vue.js, Angular, and Node.js. From dynamic SPAs to server-rendered sites, we pick the right tool for the job. We also specialise in WordPress, Shopify, and custom CMS solutions with the best plugin configurations for speed and security.",
     icon: "globe",
-    tags: ["React", "Next.js", "Vue", "Node.js", "PostgreSQL"],
+    tags: ["React", "Next.js", "Vue.js", "Angular", "Node.js", "WordPress", "Shopify", "PHP"],
   },
   {
     title: "Mobile Applications",
     description:
-      "Native and cross-platform mobile apps for iOS and Android. Clean UX, reliable performance.",
+      "Native and cross-platform mobile apps for iOS and Android. Clean UX, reliable performance, and smooth App Store deployments.",
+    detail:
+      "From consumer apps to enterprise tools, we build for both platforms using React Native, Flutter, and native Swift/Kotlin when performance demands it.",
     icon: "phone",
-    tags: ["React Native", "iOS", "Android", "Flutter"],
+    tags: ["React Native", "Flutter", "iOS", "Android", "Swift", "Kotlin"],
+  },
+  {
+    title: "E-Commerce Solutions",
+    description:
+      "Online stores and marketplaces that convert. Multi-vendor platforms, payment integrations, inventory management, and logistics — all wired together.",
+    detail:
+      "We've built stores on Shopify, WooCommerce, and fully custom stacks. From D2C fashion brands to B2B marketplaces, our e-commerce solutions handle real-world scale.",
+    icon: "layers",
+    tags: ["Shopify", "WooCommerce", "Stripe", "Razorpay", "Multi-vendor", "D2C"],
   },
   {
     title: "SaaS Platforms",
     description:
-      "Multi-tenant, subscription-based products built to scale. From auth to billing to dashboards.",
+      "Multi-tenant, subscription-based products built to scale. From auth to billing to dashboards — the full SaaS stack.",
+    detail:
+      "We architect SaaS products with proper tenant isolation, role-based access, usage metering, and billing integrations. Designed to go from 100 to 100k users without rearchitecting.",
     icon: "layers",
-    tags: ["Multi-tenant", "Stripe", "Auth", "Dashboards"],
+    tags: ["Multi-tenant", "Stripe", "Auth", "Dashboards", "APIs"],
   },
   {
     title: "AI & Automation",
     description:
-      "AI agents, ML pipelines, and intelligent automation that actually solve problems.",
+      "AI agents, ML pipelines, and intelligent automation that actually solve business problems — not just demos.",
+    detail:
+      "We build LLM-powered agents, computer vision systems, recommendation engines, and workflow automation. From chatbots to real-time data processing, we turn AI hype into production systems.",
     icon: "brain",
-    tags: ["LLMs", "ML Pipelines", "Agents", "Automation"],
+    tags: ["LLMs", "Computer Vision", "ML Pipelines", "AI Agents", "Python", "Automation"],
   },
   {
     title: "IoT Solutions",
     description:
-      "Hardware-software integration with Raspberry Pi, edge computing, and real-time data pipelines.",
+      "From smart logistics to asset tracking to utility monitoring — we build the full IoT stack from edge devices to cloud dashboards.",
+    detail:
+      "Hardware-software integration with Raspberry Pi, Arduino, edge computing, and real-time data pipelines. We transform businesses with connected devices and intelligent sensor networks.",
     icon: "cpu",
-    tags: ["Raspberry Pi", "Edge Computing", "MQTT", "Sensors"],
+    tags: ["Raspberry Pi", "Arduino", "Edge Computing", "MQTT", "Sensors", "Smart Devices"],
   },
   {
     title: "Cloud & DevOps",
     description:
-      "Infrastructure that doesn't wake you up at 3 AM. AWS, GCP, CI/CD, and monitoring done right.",
+      "For speedy and agile functionality — infrastructure that scales, CI/CD that ships, and monitoring that sleeps so you don't have to.",
+    detail:
+      "AWS, GCP, Azure, Docker, Kubernetes — we design and manage cloud infrastructure with proper security, auto-scaling, and cost optimisation. Your deploy pipeline, done right.",
     icon: "cloud",
-    tags: ["AWS", "GCP", "Docker", "Kubernetes", "CI/CD"],
+    tags: ["AWS", "GCP", "Azure", "Docker", "Kubernetes", "CI/CD", "Terraform"],
   },
 ] as const;
 
